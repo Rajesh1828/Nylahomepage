@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyla</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/Nyla (1).png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FB9EC6;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader .spinner-border {
+            width: 4rem;
+            height: 4rem;
+            color: white;
+        }
+
+        .preloader.hidden {
+            animation: fadeOut 1s ease;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Start of Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #FB9EC6;">
+        <!-- Navbar content goes here -->
+    </nav>
+
+    <!-- Your website content -->
+
+    <!-- JavaScript to Hide Preloader -->
+    <script>
+        window.addEventListener("load", function() {
+            const preloader = document.querySelector(".preloader");
+            preloader.classList.add("hidden");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyla</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/Nyla (1).png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; 
+    color: #000; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .spinner-border {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FB9EC6;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader .spinner-border {
+            width: 4rem;
+            height: 4rem;
+            color: white;
+        }
+
+        .preloader.hidden {
+            animation: fadeOut 1s ease;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+
+  
+    </style>
+
+</head>
+<body>
+   <!-- Preloader -->
+   <div class="preloader">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<!-- Start of Navigation Bar -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color: #FB9EC6;">
+  <div class="container">
+      <!-- Logo or Brand Name -->
+      <a class="navbar-brand" href="/index.html">
+          <img src="/images/Nyla (1).png" alt="Logo" style="height: 50px; width: auto;">
+      </a>
+
+      <!-- Toggler Button for Mobile View -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <!-- Spinner for Toggler -->
+          <div class="spinner-border text-light ms-2 d-none" id="navbar-spinner" role="status" style="width: 1rem; height: 1rem;">
+              <span class="visually-hidden">Loading...</span>
+          </div>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link active" href="/index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="About.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Services.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">ACADEMY</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/singlePages/BMI.html" style="background-color: #F72C5B; color: #fff; border-radius: 10px;">
+                      CHECK YOUR WEIGHT
+                      <!-- Spinner for Loading -->
+                      <div class="spinner-border spinner-border-sm text-light ms-2 d-none" id="weight-spinner" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                      </div>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<!--hero section start------>
+  <!-- Start of Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="" class="d-block w-100 carousel-img" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="" class="d-block w-100 carousel-img" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="" class="d-block w-100 carousel-img" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+            <img src="" class="d-block w-100 carousel-img" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+            <img src="" class="d-block w-100 carousel-img" alt="Image 5">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- End of Carousel -->
+
+
+
+
+<!-- Start of Services Section -->
+<div class="container hero-section">
+  <!-- <h2 class="fw-bold text-hot-pink"></h2> -->
+  <h1 class="fw-bold text-hot-pink" id="head-color">𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗡𝗬𝗟𝗔
+  </h1>
+  <div class="row align-items-center features">
+      <div class="col-lg-6 col-12">
+          <div class="feature d-flex align-items-start mb-4">
+              <div class="icon me-3">
+                  <i class="bi bi-ambulance"></i>
+              </div>
+              <div>
+                  <h4 style="display: flex; align-items: center; padding-left: 50px; color: black;" > <i class="bi bi-droplet" style="color: #FB9EC6;"></i>SERVICES</h4>
+                  <p>Our supporting team always ensures you get an instant treatment</p>
+              </div>
+          </div>
+          <div class="feature d-flex align-items-start mb-4">
+              <div class="icon me-3">
+                
+              </div>
+              <div>
+                  <h4 style="color: black;"> <i class="bi bi-flower1" style="color: #FB9EC6;"></i>Skin Care</h4>
+                  <p> multi-speciality, 50+ Advanced Critical </p>
+              </div>
+          </div>
+          <div class="feature d-flex align-items-start mb-4">
+              <div class="icon me-3">
+                  
+              </div>
+              
+              <div>
+                  <h4 style="color: black;"><i class="bi bi-life-preserver" style="color: rgb(242, 4, 39)"></i>24/7 supporting</h4>
+                  <p>Highly-qualified doctors are available 24x7 for you.</p>
+              </div>
+          </div>
+          <div class="feature d-flex align-items-start">
+              <div class="icon me-3">
+                 
+              </div>
+              <div>
+                  <h4 style="color: black;">  <i class="bi bi-tools"  style="color: #FB9EC6;"></i>Surgeries</h4>
+                  <p>1000+ Surgeries with 100% Success rate</p>
+              </div>
+          </div>
+          <div class="read-more-btn">
+              <a href="#" class="btn btn-outline-primary" id="btn-readmore">Read more</a>
+          </div>
+          
+      </div>
+      <div class="col-lg-6 col-12 text-center">
+          <img src="/images/women-removebg-preview.png" alt="Doctor Image" class="img-fluid">
+      </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Icons -->
+
+
+
+
+<!--third section start-->
+<div class="container my-5">
+  <div class="row">
+      <!-- Departments Section -->
+      <div class="col-md-7">
+          <h3 class="mb-4" id="dp-color">Departments</h3>
+          <div class="row g-4">
+              <div class="col-4 text-center">
+                  <a href="/orthopedics" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-scissors"></i></div>
+                      <div class="department-text">Haircut</div>
+                  </a>
+              </div>
+              <div class="col-4 text-center">
+                  <a href="/critical-care" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-palette"></i></div>
+                      <div class="department-text">Hair Coloring </div>
+                  </a>
+              </div>
+              <div class="col-4 text-center">
+                  <a href="/general-medicine" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-droplet"></i></div>
+                      <div class="department-text">HairTreatment</div>
+                  </a>
+              </div>
+              <div class="col-4 text-center">
+                  <a href="/gen-lap-surgery" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-mask"></i></div>
+                      <div class="department-text">Facial</div>
+                  </a>
+              </div>
+              <div class="col-4 text-center">
+                  <a href="/emergency-medicine" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-file-earmark"></i></div>
+                      <div class="department-text">Manicure &Pedicure</div>
+                  </a>
+              </div>
+            
+              <div class="col-4 text-center">
+                  <a href="/neurosurgery" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-person-bounding-box"></i></div>
+                      <div class="department-text">Massage</div>
+                  </a>
+              </div>
+              <div class="col-4 text-center">
+                  <a href="/maxillo-facial-surgery" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-wrench"></i></div>
+                      <div class="department-text">Waxing</div>
+                  </a>
+              </div>
+            
+             
+              <div class="col-4 text-center">
+                  <a href="/cardiology" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-brush"></i></div>
+                      <div class="department-text">Nail Art</div>
+                  </a>
+              </div>
+              <div class="col-4 text-center">
+                  <a href="/oncology" class="text-decoration-none department-item">
+                      <div class="department-icon"><i class="bi bi-pencil"></i></div>
+                      <div class="department-text">EyeBrow-Shaping</div>
+                  </a>
+              </div>
+             
+          </div>
+      </div>
+
+
+
+
+
+      <!--start content page-->
+
+
+<section class="custom-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 custom-image">
+        <img src="/images/SKIN.jpg" alt="skincare">
+        <!-- <div class="custom-image-overlay"></div> -->
+      </div>
+      <div class="col-lg-6">
+        <div class="custom-content">
+          <h2>SKIN CARE DEPARTMENT</h2>
+          <p>
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam inventore vel quis nobis corrupti voluptatibus exercitationem error nisi, ut laudantium dolores necessitatibus illo ipsum in.
+          </p>
+          <p>
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut voluptatibus suscipit fugit iste minima soluta dolorum, quia doloribus quibusdam rem nostrum, cumque numquam nesciunt?
+          </p>
+          <a href="your-link.html">Know more . . .</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="custom-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 custom-image">
+        <img src="/images/pigmentation.jpg" alt="skincare">
+        <!-- <div class="custom-image-overlay"></div> -->
+      </div>
+      <div class="col-lg-6">
+        <div class="custom-content">
+          <h2>PIGMENTATION</h2>
+          <p>
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam inventore vel quis nobis corrupti voluptatibus exercitationem error nisi, ut laudantium dolores necessitatibus illo ipsum in.
+          </p>
+          <p>
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut voluptatibus suscipit fugit iste minima soluta dolorum, quia doloribus quibusdam rem nostrum, cumque numquam nesciunt?
+          </p>
+          <a href="your-link.html">Know more . . .</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="custom-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="custom-content">
+          <h2>HAIR CARE DEPARTMENT</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam inventore vel quis nobis corrupti voluptatibus exercitationem error nisi, ut laudantium dolores necessitatibus illo ipsum in.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut voluptatibus suscipit fugit iste minima soluta dolorum, quia doloribus quibusdam rem nostrum, cumque numquam nesciunt?
+          </p>
+          <a href="your-link.html">Know more . . .</a>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 custom-image">
+        <img src="/images/haircare.jpg" alt="Skin Care">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="custom-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 custom-image">
+        <img src="/images/weight.jpg" alt="skincare">
+        <!-- <div class="custom-image-overlay"></div> -->
+      </div>
+      <div class="col-lg-6">
+        <div class="custom-content">
+          <h2>BODY CARE DEPARTMENT</h2>
+          <p>
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam inventore vel quis nobis corrupti voluptatibus exercitationem error nisi, ut laudantium dolores necessitatibus illo ipsum in.
+          </p>
+          <p>
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut voluptatibus suscipit fugit iste minima soluta dolorum, quia doloribus quibusdam rem nostrum, cumque numquam nesciunt?
+          </p>
+          <a href="your-link.html">Know more . . .</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="custom-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="custom-content">
+          <h2>HAIR Cut</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam inventore vel quis nobis corrupti voluptatibus exercitationem error nisi, ut laudantium dolores necessitatibus illo ipsum in.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ut voluptatibus suscipit fugit iste minima soluta dolorum, quia doloribus quibusdam rem nostrum, cumque numquam nesciunt?
+          </p>
+          <a href="your-link.html">Know more . . .</a>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 custom-image">
+        <img src="/images/haircut2.jpg" alt="Skin Care">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-black text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-md-3">
+        <img src="/images/Nyla (1).png" alt="Logo" class="img-fluid mb-3" style="max-width: 100px;">
+        <p>We provide the best services for your needs.</p>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="col-md-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Home</a></li>
+          <li><a href="#" class="text-white">Services</a></li>
+          <li><a href="#" class="text-white">Contact</a></li>
+          <li><a href="#" class="text-white">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- About Us Section -->
+      <div class="col-md-3">
+        <h5>About Us</h5>
+        <p>We are a leading company in our industry, committed to providing excellent services.</p>
+        <p>Our team consists of professionals dedicated to solving your problems.</p>
+        <p>Join us on our journey to success.</p>
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-md-3">
+        <h5>Contact Us</h5>
+        <p><strong>Phone:</strong> +123 456 7890</p>
+        <p><strong>Email:</strong> contact@nyla.com</p>
+        <h5>Follow Us</h5>
+              <ul class="list-unstyled d-flex">
+                <li><a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a></li>
+              </ul>
+
+      </div>
+    
+
+
+            <!-- Social Media Section -->
+            <!-- <div class="col-md-3">
+              <h5>Follow Us</h5>
+              <ul class="list-unstyled d-flex">
+                <li><a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+     -->
+
+    <div class="row mt-3">
+      <div class="col text-center">
+        <p>&copy; 2025 Nyla. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS and Icons -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.js"></script> -->
+  
+  <!--third section end-->
+  <script>
+    window.addEventListener("load", function() {
+        const preloader = document.querySelector(".preloader");
+        preloader.classList.add("hidden");
+    });
+</script>
+      <script src="script.js"></script>
+      
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+   .typing-animation {
+  display: inline-block; /* Ensures the text width is dynamic */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides the text that hasn't been "typed" yet */
+  border-right: 2px solid; /* Creates the cursor effect */
+  animation: typing 8s steps(40, end), blink-caret 8.0s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+  
+    <h6 class="typing-animation">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque,
+      </h6>
+      
+</body>
+</html> -->

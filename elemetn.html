@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter DIV Elements with Bootstrap 5</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .filterDiv {
+            display: none;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        .filter-item {
+            text-align: center;
+            line-height: 100px;
+            background-color: #2196F3;
+            color: white;
+            margin: 5px;
+            height: 100px;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-4">
+    <h2 class="mb-4">Filter DIV Elements</h2>
+    
+    <!-- Buttons for filtering -->
+    <div id="myBtnContainer" class="btn-group mb-4" role="group" aria-label="Filter Buttons">
+        <button class="btn btn-outline-primary active" onclick="filterSelection('all')">Show All</button>
+        <button class="btn btn-outline-primary" onclick="filterSelection('cars')">Cars</button>
+        <button class="btn btn-outline-primary" onclick="filterSelection('animals')">Animals</button>
+        <button class="btn btn-outline-primary" onclick="filterSelection('fruits')">Fruits</button>
+        <button class="btn btn-outline-primary" onclick="filterSelection('colors')">Colors</button>
+    </div>
+
+    <!-- Filterable items -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        <div class="col filterDiv cars">
+            <div class="filter-item">BMW</div>
+        </div>
+        <div class="col filterDiv colors fruits">
+            <div class="filter-item">Orange</div>
+        </div>
+        <div class="col filterDiv cars">
+            <div class="filter-item">Volvo</div>
+        </div>
+        <div class="col filterDiv colors">
+            <div class="filter-item">Red</div>
+        </div>
+        <div class="col filterDiv cars">
+            <div class="filter-item">Ford</div>
+        </div>
+        <div class="col filterDiv colors">
+            <div class="filter-item">Blue</div>
+        </div>
+        <div class="col filterDiv animals">
+            <div class="filter-item">Cat</div>
+        </div>
+        <div class="col filterDiv animals">
+            <div class="filter-item">Dog</div>
+        </div>
+        <div class="col filterDiv fruits">
+            <div class="filter-item">Melon</div>
+        </div>
+        <div class="col filterDiv fruits animals">
+            <div class="filter-item">Kiwi</div>
+        </div>
+        <div class="col filterDiv fruits">
+            <div class="filter-item">Banana</div>
+        </div>
+        <div class="col filterDiv fruits">
+            <div class="filter-item">Lemon</div>
+        </div>
+        <div class="col filterDiv animals">
+            <div class="filter-item">Cow</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    filterSelection("all");
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c === "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("show");
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].classList.add("show");
+            }
+        }
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].classList.remove("active");
+            this.classList.add("active");
+        });
+    }
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

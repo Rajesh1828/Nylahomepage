@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyla</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/Nyla (1).png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/csspages/service.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; 
+    color: #000; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+
+    .responsive-container-21 {
+  position: relative; /* Ensures the service-container can be positioned absolutely */
+  width: 100%; 
+  max-width: 2000px; 
+  margin: 0 auto; 
+}
+
+.responsive-image-21 {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+.service-container {
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-align: center; 
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+.title {
+  font-size: 3.5rem; /* Default font size for larger screens */
+  font-weight: bold; 
+  margin: 0;
+  color: #f71b6f; 
+  font-family: 'Poppins', sans-serif;
+  text-decoration: dotted underline;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem; /* Reduce font size for smaller screens */
+    position: relative;
+    margin: 0; 
+  top: 0%;
+  left: 0%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Further reduce font size for very small screens */
+    
+
+  }
+}
+
+
+.preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FB9EC6;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader img {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        .preloader.hidden {
+            animation: fadeOut 2s ease;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img src="/images/Nyla (1).png" alt="Loading...">
+  </div>
+<!-- Start of Navigation Bar -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color: #FB9EC6;">
+    <div class="container">
+        <!-- Logo or Brand Name -->
+        <a class="navbar-brand" href="/index.html">
+            <img src="/images/Nyla (1).png" alt="Logo" style="height: 50px; width: auto;">
+        </a>
+
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Services.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ACADEMY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/singlePages/BMI.html" style="background-color: #F72C5B; color: #fff; border-radius: 10px;">CHECK YOUR WEIGHT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- End of Navigation Bar -->
+
+
+<!--service hero page-->
+<div class="responsive-container-21">
+    <img src="/images/service.jpeg" alt="Lion wearing glasses" class="responsive-image-21">
+    <div class="service-container">
+        <h1 class="title">OUR SERVICES</h1>
+    </div>
+  </div>
+
+
+<!-- <h1>Responsive Image Example</h1> -->
+<!-- <img src="/images/hero2.avif" alt="Responsive Image"> -->
+
+<div class="container py-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <div class="list-group" id="serviceList">
+          <!-- Skin Dropdown -->
+          <a class="list-group-item" data-bs-toggle="collapse" href="#skinDropdown" aria-expanded="false" aria-controls="skinDropdown" data-scroll>
+            Skin <span class="dropdown-icon">&#8250;</span>
+          </a>
+          <div class="collapse" id="skinDropdown">
+            <a href="#" class="list-group-item">Skin Care - Treatments</a>
+            <a href="#" class="list-group-item">Body Care</a>
+            <a href="#" class="list-group-item">Skin Care</a>
+            <a href="#" class="list-group-item">Skin Care - Basics</a>
+            <a href="#" class="list-group-item">Skin Care - Depilation</a>
+            <a href="#" class="list-group-item">Consultation</a>
+          </div>
+
+          <!-- Hair Dropdown -->
+          <a class="list-group-item" data-bs-toggle="collapse" href="#hairDropdown" aria-expanded="false" aria-controls="hairDropdown" data-scroll>
+            Hair <span class="dropdown-icon">&#8250;</span>
+          </a>
+          <div class="collapse" id="hairDropdown">
+            <a href="#" class="list-group-item">Hair Styling</a>
+            <a href="#" class="list-group-item">Hair Treatment</a>
+          </div>
+
+          <!-- Makeup Dropdown -->
+          <a class="list-group-item" data-bs-toggle="collapse" href="#makeupDropdown" aria-expanded="false" aria-controls="makeupDropdown" data-scroll>
+            Weight Loss <span class="dropdown-icon">&#8250;</span>
+          </a>
+          <div class="collapse" id="makeupDropdown">
+            <a href="#" class="list-group-item">Bridal Makeup</a>
+            <a href="#" class="list-group-item">Casual Makeup</a>
+          </div>
+
+          <!-- Hands & Feet Dropdown -->
+          <a class="list-group-item" data-bs-toggle="collapse" href="#handsFeetDropdown" aria-expanded="false" aria-controls="handsFeetDropdown" data-scroll>
+            Hands & Feet <span class="dropdown-icon">&#8250;</span>
+          </a>
+          <div class="collapse" id="handsFeetDropdown">
+            <a href="#" class="list-group-item">Manicure</a>
+            <a href="#" class="list-group-item">Pedicure</a>
+          </div>
+
+          <!-- Services for Men -->
+          <a class="list-group-item" data-scroll>Services - Men</a>
+
+          <!-- Services for Women -->
+          <a class="list-group-item" data-scroll>Services - Women</a>
+        </div>
+      </div>
+
+      <!-- Image Cards -->
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="category">
+              <img src="/images/haircut.jpg" alt="Skin" class="category-image">
+              <div class="category-title">SKIN</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="category">
+              <img src="/images/haircut2.jpg" alt="Hair" class="category-image">
+              <div class="category-title">HAIR</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="category">
+              <img src="/images/SKIN.jpg" alt="Makeup" class="category-image">
+              <div class="category-title">MAKEUP</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="category">
+              <img src="/images/SKIN.jpg" alt="Hands & Feet" class="category-image">
+              <div class="category-title">HANDS & FEET</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- Logo Section -->
+        <div class="col-md-3">
+          <img src="/images/bottomlogo.png" alt="Logo" class="img-fluid mb-3" style="max-width: 100px;">
+          <p>We provide the best services for your needs.</p>
+        </div>
+  
+        <!-- Quick Links Section -->
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">Services</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
+            <li><a href="#" class="text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+  
+        <!-- About Us Section -->
+        <div class="col-md-3">
+          <h5>About Us</h5>
+          <p>We are a leading company in our industry, committed to providing excellent services.</p>
+          <p>Our team consists of professionals dedicated to solving your problems.</p>
+          <p>Join us on our journey to success.</p>
+        </div>
+  
+        <!-- Contact Us Section -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><strong>Phone:</strong> +123 456 7890</p>
+          <p><strong>Email:</strong> contact@nyla.com</p>
+          <h5>Follow Us</h5>
+                <ul class="list-unstyled d-flex">
+                  <li><a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a></li>
+                  <li><a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a></li>
+                  <li><a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a></li>
+                  <li><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+
+        </div>
+      
+
+
+              <!-- Social Media Section -->
+              <!-- <div class="col-md-3">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled d-flex">
+                  <li><a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a></li>
+                  <li><a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a></li>
+                  <li><a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a></li>
+                  <li><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+       -->
+  
+      <div class="row mt-3">
+        <div class="col text-center">
+          <p>&copy; 2025 Nyla. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Bootstrap JS and Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.js"></script> -->
+
+
+ <script src="script.js"></script>
+ </body>
+ </html>
